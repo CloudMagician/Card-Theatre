@@ -14,9 +14,8 @@ struct ContentView : View {
             Text("Card Theatre")
                 .font(.largeTitle)
             VStack(alignment: .center) {
-                Button(action: {
-                }) {
-                    Text("Talk")
+                NavigationLink(destination: TalkUIView()) {
+                    CircleButton(name: "Talk")
                 }
                 Button(action: {}) {
                     Text("Find")
@@ -42,3 +41,17 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
+struct CircleButton: View {
+    var name = ""
+    
+    var body: some View {
+        return HStack {
+            Text(name)
+        }
+        .frame(width: 44, height: 44)
+        .background(Color("button"))
+        .cornerRadius(30)
+        .shadow(color: Color("buttonShadow"), radius: 20, x: 0, y: 20)
+    }
+}

@@ -9,12 +9,18 @@
 import SwiftUI
 
 struct TalkUIView : View {
+    
+    @State var date = Date()
+    
     var body: some View {
-        List {
-            Text("Card Theatre")
-                .font(.largeTitle)
+        NavigationView {
+            Form {
+                DatePicker($date) {
+                    Text("Date")
+                }
+            }
+            .navigationBarTitle("Settings")
         }
-        .navigationBarTitle(Text("Card Theatre"))
     }
 }
 
