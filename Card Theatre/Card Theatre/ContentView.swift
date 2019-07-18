@@ -10,26 +10,25 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        VStack(spacing: 50.0) {
-            Text("Card Theatre")
-                .font(.largeTitle)
-            VStack(alignment: .center) {
+        NavigationView {
+            List {
                 NavigationLink(destination: TalkUIView()) {
-                    CircleButton(name: "Talk")
+                    Text("Talk")
                 }
-                Button(action: {}) {
+                NavigationLink(destination: FindUIView()) {
                     Text("Find")
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                NavigationLink(destination: AchievementUIView()) {
                     Text("Achievement")
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                NavigationLink(destination: SettingUIView()) {
                     Text("Setting")
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                NavigationLink(destination: GuideUIView()) {
                     Text("Guide")
                 }
             }
+            .navigationBarTitle(Text("Card Theatre"))
         }
     }
 }
@@ -41,17 +40,3 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
-
-struct CircleButton: View {
-    var name = ""
-    
-    var body: some View {
-        return HStack {
-            Text(name)
-        }
-        .frame(width: 44, height: 44)
-        .background(Color("button"))
-        .cornerRadius(30)
-        .shadow(color: Color("buttonShadow"), radius: 20, x: 0, y: 20)
-    }
-}

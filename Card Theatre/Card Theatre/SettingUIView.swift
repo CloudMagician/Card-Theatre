@@ -10,7 +10,26 @@ import SwiftUI
 
 struct SettingUIView : View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                NavigationLink(destination: TalkUIView()) {
+                    Text("Talk")
+                }
+                NavigationLink(destination: FindUIView()) {
+                    Text("Find")
+                }
+                NavigationLink(destination: AchievementUIView()) {
+                    Text("Achievement")
+                }
+                NavigationLink(destination: SettingUIView()) {
+                    Text("Setting")
+                }
+                NavigationLink(destination: GuideUIView()) {
+                    Text("Guide")
+                }
+            }
+            .navigationBarTitle("Setting")
+        }
     }
 }
 

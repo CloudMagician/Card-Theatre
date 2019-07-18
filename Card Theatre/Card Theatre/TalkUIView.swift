@@ -10,16 +10,23 @@ import SwiftUI
 
 struct TalkUIView : View {
     
-    @State var date = Date()
-    
     var body: some View {
         NavigationView {
-            Form {
-                DatePicker($date) {
-                    Text("Date")
+            List {
+                NavigationLink(destination: TalkUIView()) {
+                    Text("Child's fairy tale")
+                }
+                NavigationLink(destination: FindUIView()) {
+                    Text("Myth")
+                }
+                NavigationLink(destination: AchievementUIView()) {
+                    Text("Fable")
+                }
+                NavigationLink(destination: SettingUIView()) {
+                    Text("Fun story")
                 }
             }
-            .navigationBarTitle("Settings")
+            .navigationBarTitle("Talk")
         }
     }
 }
