@@ -12,6 +12,7 @@
 		B05199AB22DCA36100CE49E1 /* AchievementUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05199AA22DCA36100CE49E1 /* AchievementUIView.swift */; };
 		B05199AD22DCA38000CE49E1 /* SettingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05199AC22DCA38000CE49E1 /* SettingUIView.swift */; };
 		B05199AF22DCA3A900CE49E1 /* GuideUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05199AE22DCA3A900CE49E1 /* GuideUIView.swift */; };
+		B090397122E1751D00AC55AA /* CardsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B090397022E1751D00AC55AA /* CardsUIView.swift */; };
 		B0C7A68522D71DB800CDC182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7A68422D71DB800CDC182 /* AppDelegate.swift */; };
 		B0C7A68722D71DB800CDC182 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7A68622D71DB800CDC182 /* SceneDelegate.swift */; };
 		B0C7A68922D71DB800CDC182 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7A68822D71DB800CDC182 /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 		B05199AA22DCA36100CE49E1 /* AchievementUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementUIView.swift; sourceTree = "<group>"; };
 		B05199AC22DCA38000CE49E1 /* SettingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUIView.swift; sourceTree = "<group>"; };
 		B05199AE22DCA3A900CE49E1 /* GuideUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideUIView.swift; sourceTree = "<group>"; };
+		B090397022E1751D00AC55AA /* CardsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUIView.swift; sourceTree = "<group>"; };
 		B0C7A68122D71DB800CDC182 /* Card Theatre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Theatre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C7A68422D71DB800CDC182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0C7A68622D71DB800CDC182 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				B0C7A68622D71DB800CDC182 /* SceneDelegate.swift */,
 				B0C7A68822D71DB800CDC182 /* ContentView.swift */,
 				B02F6F5E22DC8F0D009ED4D3 /* TalkUIView.swift */,
+				B090397022E1751D00AC55AA /* CardsUIView.swift */,
 				B05199A822DCA34100CE49E1 /* FindUIView.swift */,
 				B05199AA22DCA36100CE49E1 /* AchievementUIView.swift */,
 				B05199AC22DCA38000CE49E1 /* SettingUIView.swift */,
@@ -292,6 +295,7 @@
 				B05199A922DCA34100CE49E1 /* FindUIView.swift in Sources */,
 				B05199AB22DCA36100CE49E1 /* AchievementUIView.swift in Sources */,
 				B0C7A68922D71DB800CDC182 /* ContentView.swift in Sources */,
+				B090397122E1751D00AC55AA /* CardsUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
