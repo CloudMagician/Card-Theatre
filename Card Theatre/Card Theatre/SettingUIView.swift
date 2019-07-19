@@ -9,26 +9,41 @@
 import SwiftUI
 
 struct SettingUIView : View {
+    @State var receive = false
+    @State var number = 1
+    @State var selection = 1
+    @State var date = Date()
+    @State var email = ""
+    @State var submit = false
+    
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: TalkUIView()) {
-                    Text("Talk")
+            Form {
+                Toggle(isOn: $receive) {
+                    Text("Recieve Notifications")
                 }
-                NavigationLink(destination: FindUIView()) {
-                    Text("Find")
+                Stepper(value: $number, in: 1...10) {
+                    Text("\(number) Notification\(number > 1 ? "s" : "") per week")
                 }
-                NavigationLink(destination: AchievementUIView()) {
-                    Text("Achievement")
+                Picker(selection: $selection, label: Text("Favourite course")) {
+                    Text("SwiftUI").tag(1)
+                    Text("React").tag(2)
                 }
-                NavigationLink(destination: SettingUIView()) {
-                    Text("Setting")
+                DatePicker($date) {
+                    Text("Date")
                 }
-                NavigationLink(destination: GuideUIView()) {
-                    Text("Guide")
+                Section(header: Text("Email")) {
+                    TextField("Your email: ", text: $email)
+                        .textFieldStyle(.roundedBorder)
                 }
+                Button(action: { self.submit.toggle() }) {
+                    Text("Submit")
+                }
+                .presentation($submit, alert: {
+                    Alert(title: Text("Thanks"), message: Text("Email: \(email)"))
+                })
             }
-            .navigationBarTitle("Setting")
+            .navigationBarTitle("Settings")
         }
     }
 }

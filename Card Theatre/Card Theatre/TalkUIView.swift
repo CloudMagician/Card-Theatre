@@ -13,7 +13,7 @@ struct TalkUIView : View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: TalkUIView()) {
+                NavigationLink(destination: CardsUIView()) {
                     Text("Child's fairy tale")
                 }
                 NavigationLink(destination: FindUIView()) {
